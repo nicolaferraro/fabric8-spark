@@ -12,7 +12,7 @@
     <artifactId>examples</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>spark-quickstart</module>
+        <module>spark-quickstart-java</module>
     </modules>
 
 

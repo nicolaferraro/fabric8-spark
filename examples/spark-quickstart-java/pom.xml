@@ -9,17 +9,30 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spark-quickstart</artifactId>
+    <artifactId>spark-quickstart-java</artifactId>
 
     <properties>
         <fabric8.useProjectClasspath>true</fabric8.useProjectClasspath>
+
+        <!-- Development image -->
+        <!--<fabric8.generator.spark.image>172.30.139.185:5000/spark/radanalytics-java-spark</fabric8.generator.spark.image>-->
+
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>2.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>fabric8-spark-extension</artifactId>
             <version>${project.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -29,14 +42,14 @@
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
                 <version>${fabric8-maven-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>resource</goal>
-                            <goal>build</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <!--<executions>-->
+                    <!--<execution>-->
+                        <!--<goals>-->
+                            <!--<goal>resource</goal>-->
+                            <!--<goal>build</goal>-->
+                        <!--</goals>-->
+                    <!--</execution>-->
+                <!--</executions>-->
             </plugin>
 
         </plugins>

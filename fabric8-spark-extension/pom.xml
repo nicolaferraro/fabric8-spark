@@ -16,12 +16,21 @@
             <groupId>io.fabric8</groupId>
             <artifactId>fabric8-maven-generator-api</artifactId>
             <version>${fabric8-maven-plugin.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.fabric8</groupId>
+            <artifactId>fabric8-maven-generator-java-exec</artifactId>
+            <version>${fabric8-maven-plugin.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>io.fabric8</groupId>
             <artifactId>fabric8-maven-enricher-api</artifactId>
             <version>${fabric8-maven-plugin.version}</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
