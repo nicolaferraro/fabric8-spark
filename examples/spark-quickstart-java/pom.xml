@@ -17,6 +17,8 @@
         <!-- Development image -->
         <!--<fabric8.generator.spark.image>172.30.139.185:5000/spark/radanalytics-java-spark</fabric8.generator.spark.image>-->
 
+        <fabric8.generator.spark.clusterName>mycluster</fabric8.generator.spark.clusterName>
+
     </properties>
 
     <dependencies>
