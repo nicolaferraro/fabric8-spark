@@ -6,10 +6,9 @@ import java.util.List;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import org.slf4j.LoggerFactory;
 
-/**
- *
- */
+
 public class Spark {
 
     public static void main(String[] args) throws Exception {
@@ -28,6 +27,7 @@ public class Spark {
         int count = dataSet.map(e -> {
                 double x = Math.random() * 2 - 1;
                 double y = Math.random() * 2 - 1;
+                LoggerFactory.getLogger("xxx").info("Hello world {}, {}", x, y);
                 return (x * x + y * y < 1) ? 1 : 0;
         }).reduce((x, y) -> x + y);
 

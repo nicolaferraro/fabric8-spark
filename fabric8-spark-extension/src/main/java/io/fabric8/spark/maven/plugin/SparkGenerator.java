@@ -61,6 +61,7 @@ public class SparkGenerator extends JavaExecGenerator {
         env.put("OSHINKO_CLUSTER_NAME", clusterName);
         env.put("OSHINKO_DEL_CLUSTER", getConfig(Config.delCluster));
         env.put("APP_EXIT", getConfig(Config.appExit));
+        env.put("APP_FILE", getProject().getBuild().getFinalName() + ".jar");
 
         return env;
     }
